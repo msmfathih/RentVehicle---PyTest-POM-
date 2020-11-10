@@ -3,10 +3,7 @@ import time
 import pytest
 import allure
 import warnings
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 from TestData.config import TestData
 from Pages.loginPage import LoginPage
 from Pages.verify_driver_page import VerifyPage
@@ -20,7 +17,7 @@ class BaseTest:
 
 class Test_verifypage(BaseTest):
 
-    @pytest.mark.login("Grouping the TC")
+    #@pytest.mark.login("Grouping/Marking the TC")
     #@pytest.mark.filterwarnings("warning filters to specific test items")
     @pytest.mark.run(order=1)
     def test_invalid_login(self):
@@ -37,7 +34,7 @@ class Test_verifypage(BaseTest):
 
         self.driver.refresh()
 
-    @pytest.mark.login
+    # @pytest.mark.login
     @pytest.mark.run(order=2)
     def test_valid_login(self):
         self.driver.get(TestData.BASE_URL)
@@ -70,7 +67,8 @@ class Test_verifypage(BaseTest):
         element = self.driver.find_element_by_xpath(Locators2.driver_listview_button_xpath)
         self.driver.execute_script("arguments[0].click();", element),time.sleep(2)
 
-    @pytest.mark.xfail("deliberately fail the TC")
+
+    # @pytest.mark.xfail("deliberately fail the TC")
     @pytest.mark.run(order=4)
     def test_verify_driver_details(self):
         self.vp = VerifyPage(self.driver)

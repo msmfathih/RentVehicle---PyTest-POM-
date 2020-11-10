@@ -18,16 +18,3 @@ def init_driver(request):
     yield
     web_driver.close()
 
-
-#Parallal execution
-#py.test -v -n 2
-#pip install pytest-xdist
-
-
-#reporting
-#py.test -v -s --html=test_param_result.html
-#py.test -v -s --html=.\Reports\reports.html  --self-contained-html test_home_page.py
-
-#Run Test Suite Collections
-#py.test -v -s C:\Users\fathih\PycharmProjects\Rent Vehicles\admin_test_suite
-

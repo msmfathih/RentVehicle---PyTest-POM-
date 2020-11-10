@@ -17,6 +17,9 @@ class VerifyPage():
         self.verify_nic = Locators2.verify_driver_nic_xpath
         self.vehicle_number = Locators2.verify_vehicle_number_xpath
 
+        self.need_to_logout = Locators2.need_on_logout_xpath
+        self.click_on_logout_button = Locators2.click_on_logout_xpath
+
 
     def click_on_driver_dropdown(self):
         self.driver.find_element(By.XPATH, self.driver_dropdown_menu).click()
@@ -26,14 +29,10 @@ class VerifyPage():
         self.driver.find_element(By.XPATH, self.driver_listview).click()
 
 
-    # def verify_driver_name(self):
-    #     self.driver.find_element(By.XPATH, self.verify_driver_name)
-    # def verify_email_id(self):
-    #     self.driver.find_element(By.XPATH, self.verify_driver_emailid)
-    # def verify_nic(self):
-    #     self.driver.find_element(By.XPATH, self.verify_nic())
-    # def verify_vehicle_number(self):
-    #     self.driver.find_element(By.XPATH, self.vehicle_number)
+    def need_to_logout(self):
+        self.driver.find_element(By.XPATH, self.need_to_logout).click()
+    def click_on_logout(self):
+        self.driver.find_element(By.XPATH,self.click_on_logout_button).click()
 
 
 

@@ -19,6 +19,9 @@ class Locators2():
     verify_vehicle_number_xpath = "//label[contains(text(),'Vehicle Number : EP-HQ-8165')]"
     verify_vehicle_type_xpath  = "//label[contains(text(),'Vehicle Number : EP-HQ-8165')]"
 
+    #logout
+    need_on_logout_xpath = "//p[contains(text(),'Need to logout ?')]"
+    click_on_logout_xpath ="//p[contains(text(),'Logout')]"
 
 
 

@@ -15,7 +15,6 @@ from TestData.config import TestData
 class BaseTest:
     pass
 
-
 class Test_loginpage(BaseTest):
 
     def test_login(self):
@@ -71,11 +70,9 @@ class Test_loginpage(BaseTest):
         self.ff.enter_vehicle_number(TestData.VEHICLE_NUMBER)
 
 
-
     def test_vehicle_owner_radiobtn(self):
         element = self.driver.find_element_by_css_selector("input.is_vehicle_owner:nth-child(4)")
         self.driver.execute_script("arguments[0].click();", element)
-
 
     def test_select_vehicle_type(self):
         self.ff = FormPage(self.driver)
@@ -127,7 +124,6 @@ class Test_loginpage(BaseTest):
     def test_submit_details(self):
         element = self.driver.find_element_by_id("submitBtn")
         self.driver.execute_script("arguments[0].click();", element)
-
         verifyEmailId = self.driver.find_element(By.XPATH, Locators.verify_already_existing_email_xpath)
         assert verifyEmailId.text == TestData.EMAIL_VALIDATION
 

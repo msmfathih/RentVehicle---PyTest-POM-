@@ -18,15 +18,9 @@ from TestData.config import TestData
 class BaseTest:
     pass
 
-
-
-
 class Test_loginpage(BaseTest):
 
-
-
     def test_login(self):
-
 
         self.driver.get(TestData.BASE_URL)
         self.driver.implicitly_wait(10)

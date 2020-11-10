@@ -67,16 +67,16 @@ class Test_verifypage(BaseTest):
     def test_verify_driver_details(self):
         self.vp = VerifyPage(self.driver)
         verify_driver_name = self.driver.find_element(By.XPATH, Locators2.verify_drivername_xpath)
-        assert verify_driver_name.text == TestData.DRIVER_NAME
+        assert verify_driver_name.text == TestData.VERIFY_DRIVER_NAME
 
         verify_driver_emai_id = self.driver.find_element(By.XPATH, Locators2.verify_driver_email_id)
-        assert verify_driver_emai_id.text == TestData.DRIVER_EMAIL
+        assert verify_driver_emai_id.text == TestData.VERIFY_DRIVER_EMAIL
 
         verify_driver_nic = self.driver.find_element(By.XPATH, Locators2.verify_driver_nic_xpath)
-        assert verify_driver_nic.text == TestData.DRIVER_NIC
+        assert verify_driver_nic.text == TestData.VERIFY_DRIVER_NIC
 
         verify_driver_vehicle_number= self.driver.find_element(By.XPATH, Locators2.verify_vehicle_number_xpath)
-        assert verify_driver_vehicle_number.text == TestData.VEHICLE_NUMBER,time.sleep(5)
+        assert verify_driver_vehicle_number.text == TestData.VERIFY_VEHICLE_NUMBER,time.sleep(5)
 
 
 

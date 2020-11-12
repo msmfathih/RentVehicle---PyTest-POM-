@@ -34,7 +34,7 @@ class Test_verifypage(BaseTest):
 
         self.driver.refresh()
 
-    # @pytest.mark.login
+    #@pytest.mark.login
     @pytest.mark.run(order=2)
     def test_valid_login(self):
         self.driver.get(TestData.BASE_URL)

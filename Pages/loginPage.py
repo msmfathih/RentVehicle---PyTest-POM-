@@ -21,6 +21,7 @@ class LoginPage():
         self.driver.find_element(By.ID, self.password_textbox_id).send_keys(password)
 
     def click_login(self):
+    
         self.driver.find_element(By.ID, self.loginbtn_id).click()
 
 

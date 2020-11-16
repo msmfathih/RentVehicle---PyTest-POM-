@@ -5,7 +5,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
+
+
 @pytest.fixture(params=["chrome"],scope='class')
+
+
 def init_driver(request):
     if  request.param == "chrome":
         web_driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -23,6 +27,9 @@ def init_driver(request):
 #Parallal execution
 #py.test -v -n 2
 #pip install pytest-xdist
+
+#run specific function
+#pytest -v -s  test_verify_driver::test_invalid_login
 
 
 #reporting

@@ -3,6 +3,7 @@ import time
 import pytest
 import allure
 import warnings
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from TestData.config import TestData
 from Pages.loginPage import LoginPage
@@ -75,11 +76,19 @@ class Test_verifypage(BaseTest):
         verify_driver_name = self.driver.find_element(By.XPATH, Locators2.verify_drivername_xpath)
         assert verify_driver_name.text == TestData.VERIFY_DRIVER_NAME
 
-        verify_driver_emai_id = self.driver.find_element(By.XPATH, Locators2.verify_driver_email_id)
-        assert verify_driver_emai_id.text == TestData.VERIFY_DRIVER_EMAIL
+        link = None
+        while not link:
+            try:
+                link = self.driver.find_element(By.XPATH, Locators2.verify_driver_email_id)
+                print("verified register title")
+            except NoSuchElementException:
+                time.sleep(2)
 
         verify_driver_nic = self.driver.find_element(By.XPATH, Locators2.verify_driver_nic_xpath)
-        assert verify_driver_nic.text == TestData.VERIFY_DRIVER_NIC
+        if verify_driver_nic is not None:
+            print("Driver nic number verified")
+        else:
+            print("Driver nic number is not verified")
 
         verify_driver_vehicle_number= self.driver.find_element(By.XPATH, Locators2.verify_vehicle_number_xpath)
         assert verify_driver_vehicle_number.text == TestData.VERIFY_VEHICLE_NUMBER,time.sleep(2)

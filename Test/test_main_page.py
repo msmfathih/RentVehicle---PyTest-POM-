@@ -1,5 +1,6 @@
 import time
 import pytest
+from selenium.common.exceptions import ElementNotSelectableException
 from selenium.webdriver.common.by import By
 from Locators.Locators import Locators
 from selenium.webdriver.support import expected_conditions as EC
@@ -34,6 +35,7 @@ class Test_loginpage(BaseTest):
         self.lp = LoginPage(self.driver)
         self.lp.enter_username(TestData.USERNAME)
         self.lp.enter_password(TestData.PASSWORD)
+
 
         verifyForgotPassword = self.driver.find_element(By.XPATH, Locators.forgot_password_xpath)
         assert verifyForgotPassword.text == Locators.forgot_password_message
@@ -124,6 +126,7 @@ class Test_loginpage(BaseTest):
     def test_submit_details(self):
         element = self.driver.find_element_by_id("submitBtn")
         self.driver.execute_script("arguments[0].click();", element)
+
         verifyEmailId = self.driver.find_element(By.XPATH, Locators.verify_already_existing_email_xpath)
         assert verifyEmailId.text == TestData.EMAIL_VALIDATION
 

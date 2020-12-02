@@ -24,13 +24,13 @@ class TestData:
     VERIFY_VEHICLE_NUMBER = "Vehicle Number : EP-HQ-8165"
 
 
-    FILE_UPLOAD_PATH = "C://Users//fathih//PycharmProjects//Rent_POM//Test//images//python.png"
-    FILE_UPLOAD_BACK_PATH = "C://Users//fathih//PycharmProjects//Rent_POM//Test//images//python.png"
-    FILE_UPLOAD_VEHICLE_PICTURE = "C://Users//fathih//PycharmProjects//Rent_POM//Test//images//python.png"
+    FILE_UPLOAD_PATH = "C://Users//fathih//PycharmProjects//demo_automation_in//Test//Image//myavatar.png"
+    FILE_UPLOAD_BACK_PATH = "C://Users//fathih//PycharmProjects//demo_automation_in//Test//Image//myavatar.png"
+    FILE_UPLOAD_VEHICLE_PICTURE = "C://Users//fathih//PycharmProjects//demo_automation_in//Test//Image//myavatar.png"
 
 
-    FILE_UPLOAD_VEHICLE_REGISTRATION_COPY = "C://Users//fathih//PycharmProjects//Rent_POM//Test//images//python.png"
-    FILE_UPLOAD_DRIVER_PHOTO = "C://Users//fathih//PycharmProjects//Rent_POM//Test//images//python.png"
+    FILE_UPLOAD_VEHICLE_REGISTRATION_COPY = "C://Users//fathih//PycharmProjects//demo_automation_in//Test//Image//myavatar.png"
+    FILE_UPLOAD_DRIVER_PHOTO = "C://Users//fathih//PycharmProjects//demo_automation_in//Test//Image//myavatar.png"
     PARKING_LOCATION = "Delma Street"
 
     HIRING_TIME_FROM = "4:00PM"
